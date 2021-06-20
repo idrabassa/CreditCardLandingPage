@@ -1,0 +1,418 @@
+/* 
+==============
+General Styles
+==============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,700&family=Open+Sans:wght@700&display=swap");
+@font-face {
+  font-family: CreditFont;
+  src: url(./CREDIT\ CARD/CREDC___.ttf) format("truetype");
+}
+:root {
+  --gradient: linear-gradient(to right, #f7f7f70c, #f8f8f8);
+}
+*,
+body,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  height: 130vh;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+li {
+  transform: scale(1);
+  transition: all ease-in-out 0.2s;
+}
+li:hover {
+  transform: scale(1.2);
+}
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+}
+/* 
+==============
+BackGD Styles
+==============
+*/
+section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.bg-left {
+  height: 100%;
+  z-index: -10;
+  position: relative;
+  width: 60%;
+  background: #31156c;
+}
+.bg-rigth {
+  height: 100%;
+  z-index: -10;
+  position: relative;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(-135deg, #7b6ddb, #961e9a, #d51451, orange 100%);
+}
+.circle {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  border-radius: 50%;
+  background: linear-gradient(-135deg, orange, #d51451, #961e9a, #7b6ddb 100%);
+  height: 300px;
+  width: 300px;
+  filter: blur(90px);
+}
+/* 
+==============
+Body Styles
+==============
+*/
+main {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.navbar img {
+  filter: invert(1);
+  height: 60px;
+  width: 60px;
+}
+.navbar .logo {
+  transform: rotateY(0deg);
+  transition: all ease-in-out 0.5s;
+}
+.navbar .logo.rotate {
+  transform: rotateY(360deg);
+}
+.nav-group {
+  display: flex;
+  flex-direction: row;
+}
+.nav-group li {
+  margin: 0 15px;
+}
+
+.navbar button {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 10px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: all ease-in-out 0.3s;
+}
+button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.body {
+  display: flex;
+  flex-direction: row;
+}
+.body-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 150px;
+}
+.body-left .first-heading {
+  position: relative;
+  left: 30px;
+  font-size: 1.5rem;
+  color: white;
+}
+.body-left .first-heading::before {
+  content: "";
+  top: 10px;
+  left: -30px;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: white;
+}
+.body-left h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: white;
+}
+.body-left h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 2.8px;
+  font-weight: bolder;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+.body-left button {
+  margin-top: 50px;
+  width: 150px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 20px 30px;
+  color: white;
+  background: linear-gradient(to left, #d53a9d, #743ad5);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.community {
+  margin-top: 200px;
+}
+.community {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.people {
+  display: flex;
+}
+.person {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.person img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.learn-more {
+  position: relative;
+  left: -25px;
+  color: white;
+}
+.learn-more a {
+  font-family: "Open Sans", sans-serif;
+  text-transform: none;
+  text-decoration: underline;
+  transition: all linear 0.05s;
+}
+.learn-more a:hover {
+  font-family: "Open Sans", sans-serif;
+  text-transform: none;
+  text-decoration: none;
+  color: #d51451;
+}
+.people div {
+  transform: rotate(0deg);
+  transition: all ease-in-out 0.5s;
+}
+.people div:hover {
+  transform: rotate(35deg);
+}
+.people div:nth-child(2) {
+  left: -15px;
+}
+.people div:nth-child(3) {
+  left: -30px;
+}
+.people div:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  background: radial-gradient(
+    farthest-corner at 40px 40px,
+    #7b6ddb,
+    #961e9a,
+    #d51451,
+    orange 100%
+  );
+  left: -45px;
+}
+.person {
+  transform: translateX(0px);
+  transition: all ease-in-out 0.5s;
+}
+.person.translate {
+  transform: translateX(15px);
+}
+.body-right {
+  width: 50%;
+}
+.card {
+  width: 450px;
+  height: 300px;
+  background: #f8f8f8;
+  position: relative;
+  border-radius: 10px;
+}
+.card:nth-child(1) {
+  position: relative;
+  top: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.616);
+  transform: rotate(35deg);
+  z-index: 10;
+}
+.card:nth-child(1) svg {
+  position: relative;
+  transform: scale(1.4);
+  filter: grayscale(100%) invert(1);
+  color: white;
+}
+.tittle-number-card {
+  color: white;
+}
+.number-card {
+  margin-top: 30px;
+}
+.number {
+  font-family: CreditFont;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.616);
+}
+.number span {
+  margin-left: 30px;
+}
+.expireDate-card {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.expireDate {
+  color: white;
+}
+.expireDate-number {
+  font-family: CreditFont;
+  color: rgba(255, 255, 255, 0.616);
+}
+.expireDate-card div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+}
+.circle1 {
+  position: relative;
+  background: linear-gradient(
+    to top,
+    transparent,
+    rgba(255, 255, 255, 0.616) 70%
+  );
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.circle2 {
+  position: relative;
+  left: -25px;
+  background: linear-gradient(
+    to top,
+    transparent,
+    rgba(255, 255, 255, 0.616) 70%
+  );
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.card:nth-child(2) {
+  position: relative;
+  top: 120px;
+  background: #7c6ddb98;
+  padding: 40px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.589);
+  transform: rotate(-25deg);
+  z-index: 9;
+}
+.card:nth-child(2) .logo-card1 svg {
+  transform: scale(1.2);
+  filter: invert(1) grayscale(100%);
+}
+.ship-card {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ship-card img {
+  filter: invert(1) grayscale(100%);
+}
+.ship-card svg {
+  position: relative;
+  top: 15px;
+  right: 15px;
+  transform: scale(2.2);
+  filter: invert(1) grayscale(100%);
+}
+
+/* 
+==============
+Skewed Styles
+==============
+*/
+/* .navbar button::before{
+    content: "";
+    width: 105px;
+    height: 105px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: rgb(255, 255, 255);
+    z-index: -1;
+    transform: skew(2deg,2deg);
+} */
+/* .navbar .button::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: -2px;
+    bottom: -2px;
+    
+    background: rgb(255, 255, 255);
+    transform: skew(2deg,2deg);
+    z-index: -1;
+} */
