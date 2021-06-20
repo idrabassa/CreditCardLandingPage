@@ -4,4 +4,4 @@ Web App using the HTML5, CSS, JS COUNTRIES API
 
 - Live example -> https://idrabassa.github.io/CreditCardLandingPage/
 
-![](https://github.com/idrabassa/CreditCardLandingPage/Example.png)
+![](https://github.com/idrabassa/CreditCardLandingPage/Example.jpg)
